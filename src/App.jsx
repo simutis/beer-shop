@@ -1,22 +1,17 @@
-import React, { useEffect, useContext } from 'react';
+import React from 'react';
 import { observer } from 'mobx-react-lite';
-import StoreContext from './store/StoreContext';
 import './App.css';
 import Menu from "./components/menu/Menu";
 import Styled from './App.styles';
-import ContentPage from "./components/content/ContentContainer";
+import AllTabsContent from "./components/content/AllTabsContent";
 
 
 const App = () => {
-  const {
-    helloString
-  } = useContext(StoreContext);
-
   return (
     <Styled.AppWrapper>
       <Styled.MobileFrame>
         <Menu />
-        <ContentPage />
+        <AllTabsContent />
       </Styled.MobileFrame>
     </Styled.AppWrapper>
   );

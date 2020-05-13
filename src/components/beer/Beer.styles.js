@@ -4,7 +4,12 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 33%;
+  width: 30%;
+  height: 35%;
+  margin-right: 5%;
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
 `;
 
 const Picture = styled.div`

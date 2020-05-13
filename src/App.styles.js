@@ -10,13 +10,12 @@ const AppWrapper = styled.div`
 `;
 
 const MobileFrame = styled.main`
-  max-width: 465px;
+  width: 465px;
   max-height: 768px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
   height: 100%;
   background-color: white;
+  overflow: hidden;
+  position: relative;
 `;
 
 export default {

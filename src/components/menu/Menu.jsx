@@ -13,24 +13,21 @@ const Menu = () => {
   return (
     <Styled.Wrapper>
       <Styled.Header>
-        <Styled.MenuTab onClick={() => setActiveTab(1)}>
+        <Styled.MenuTab onClick={() => setActiveTab(0)}>
           Coffee
         </Styled.MenuTab>
         <Styled.MenuTab onClick={() => {
-          setActiveTab(2)
+          setActiveTab(1)
         }}>
           Meal
         </Styled.MenuTab>
-        <Styled.MenuTab onClick={() => setActiveTab(3)}>
+        <Styled.MenuTab onClick={() => setActiveTab(2)}>
           Discount
         </Styled.MenuTab>
-        <Styled.MenuTab onClick={() => setActiveTab(4)}>
+        <Styled.MenuTab onClick={() => setActiveTab(3)}>
           Search
         </Styled.MenuTab>
-        <Styled.ActiveBackground activeTab={activeTab}>
-          {activeTab !== 1 ? <Styled.BlackCorner direction="left"/> : null}
-          {activeTab !== 4 ? <Styled.BlackCorner direction="right"/> : null}
-        </Styled.ActiveBackground>
+        <Styled.ActiveBackground activeTab={activeTab} />
       </Styled.Header>
     </Styled.Wrapper>
   );

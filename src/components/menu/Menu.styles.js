@@ -9,6 +9,7 @@ const Header = styled.div`
   background-color: #ca1c00;
   display: flex;
   z-index: -1;
+  overflow: hidden;
 `;
 
 const MenuTab = styled.div`
@@ -25,36 +26,41 @@ const MenuTab = styled.div`
 const ActiveBackground = styled.div`
   position: absolute;
   bottom: 0;
-  left: ${({ activeTab }) => (activeTab - 1) * 25}%;
+  left: ${({ activeTab }) => activeTab * 25}%;
   background-color: #353535;
   height: 60px;
   width: 25%;
   border-radius: 10px 10px 0 0;
   z-index: 0;
   transition: all 0.5s ease;
-`;
-
-const BlackCorner = styled.div`
-  position: absolute;
-  width: 20px;
-  height: 10px;
-  bottom: 0;
-  ${({ direction }) => (direction === 'left' ? 'left: -20px' : 'right: -20px')};
-  ${({ direction }) =>
-    direction === 'left'
-      ? 'border-bottom-right-radius: 10px'
-      : 'border-bottom-left-radius: 10px'};
-  ${({ direction }) =>
-    direction === 'left'
-      ? 'box-shadow: 10px 0 0 0 #353535'
-      : 'box-shadow: -10px 0 0 0 #353535'};
-  z-index: 9;
+  margin-left: 3px;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    bottom: 0;
+    left: -20px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 10px 0 0 0 #353535;
+    z-index: 9;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    bottom: 0;
+    right: -20px;
+    border-bottom-left-radius: 10px;
+    box-shadow: -10px 0 0 0 #353535;
+    z-index: 9;
+  }
 `;
 
 export default {
   Wrapper,
   Header,
   MenuTab,
-  BlackCorner,
   ActiveBackground
 };
