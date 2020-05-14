@@ -14,15 +14,13 @@ const App = () => {
     setContainerHeight,
   } = useContext(StoreContext);
 
-  const containerRef = useRef(null);
-
   useLayoutEffect(() => setContainerHeight(
-    containerRef.current.clientHeight
+    window.innerHeight
   ), []);
 
   return (
-    <Styled.AppWrapper ref={containerRef} containerHeight={containerHeight}>
-      <Styled.MobileFrame >
+    <Styled.AppWrapper containerHeight={containerHeight}>
+      <Styled.MobileFrame containerHeight={containerHeight}>
         <Menu />
         <AllTabsContent />
         <Cart />

@@ -11,7 +11,8 @@ const AppWrapper = styled.div`
 
 const MobileFrame = styled.main`
   width: 100vh;
-  height: 100%;
+  height: ${({containerHeight}) => containerHeight ?
+  `${containerHeight}px` : '100vh'};
   max-width: 450px;
 
   background-color: white;
