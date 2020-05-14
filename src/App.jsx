@@ -4,6 +4,7 @@ import './App.css';
 import Menu from "./components/menu/Menu";
 import Styled from './App.styles';
 import AllTabsContent from "./components/content/AllTabsContent";
+import Cart from "./components/cart/Cart";
 
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
       <Styled.MobileFrame>
         <Menu />
         <AllTabsContent />
+        <Cart />
       </Styled.MobileFrame>
     </Styled.AppWrapper>
   );

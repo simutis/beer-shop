@@ -21,6 +21,7 @@ const MenuTab = styled.div`
   border-radius: 10px;
   color: white;
   z-index: 1;
+  font-size: 30px;
 `;
 
 const ActiveBackground = styled.div`

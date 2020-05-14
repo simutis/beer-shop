@@ -10,7 +10,8 @@ const AppWrapper = styled.div`
 `;
 
 const MobileFrame = styled.main`
-  width: 465px;
+  width: 100%;
+  max-width: 450px;
   max-height: 768px;
   height: 100%;
   background-color: white;

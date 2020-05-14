@@ -5,7 +5,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   position: relative;
   width: 30%;
-  height: 35%;
+  height: 29%;
   margin-right: 5%;
   &:nth-child(3n) {
     margin-right: 0;
@@ -26,7 +26,7 @@ const PicWrapper = styled.div`
   height: 60%;
   width: 100%;
   border: 2px solid gray;
-  border-radius: 6px;
+  border-radius: 15px;
   margin-bottom: 5px;
 `;
 

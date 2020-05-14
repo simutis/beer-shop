@@ -14,18 +14,18 @@ const Menu = () => {
     <Styled.Wrapper>
       <Styled.Header>
         <Styled.MenuTab onClick={() => setActiveTab(0)}>
-          Coffee
+          <i className="fa fa-coffee" aria-hidden="true" />
         </Styled.MenuTab>
         <Styled.MenuTab onClick={() => {
           setActiveTab(1)
         }}>
-          Meal
+          <i className="fa fa-cutlery" aria-hidden="true" />
         </Styled.MenuTab>
         <Styled.MenuTab onClick={() => setActiveTab(2)}>
-          Discount
+          <i className="fa fa-percent" aria-hidden="true" />
         </Styled.MenuTab>
         <Styled.MenuTab onClick={() => setActiveTab(3)}>
-          Search
+          <i className="fa fa-search" aria-hidden="true" />
         </Styled.MenuTab>
         <Styled.ActiveBackground activeTab={activeTab} />
       </Styled.Header>

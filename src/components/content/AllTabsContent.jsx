@@ -6,21 +6,22 @@ import FirstTabContent from "./FirstTabContent";
 import SecondTabContent from "./SecondTabContent";
 import ThirdTabContent from "./ThirdTabContent";
 import FourthTabContent from "./FourthTabContent";
+import AddToCartModal from "../modal/AddToCartModal";
 
 
 const AllTabsContent = () => {
   const {
     activeTab,
-    setActiveTab
+    showModal
   } = useContext(StoreContext);
 
-  console.log('----activeTab: ', activeTab);
   return (
       <Styled.AllTabs className="tabs__all" {...{ activeTab }}>
         <FirstTabContent />
         <SecondTabContent />
         <ThirdTabContent />
         <FourthTabContent />
+        {showModal ? <AddToCartModal/> : null}
       </Styled.AllTabs>
   );
 };

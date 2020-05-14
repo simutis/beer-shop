@@ -19,7 +19,9 @@ const Section = ({ name }) => {
     fetchBeers({ section: name, page: 1 });
   }, []);
 
-  const sectionBeers = store[`${name}Beers`] || [];
+  const sectionBeers = store[`${name}Beers`] || {};
+  const beersIds = Object.keys(sectionBeers);
+
   const pagesFetched = store.pagesFetched[name];
 
   const fetchNextpage = (isVisible) => {
@@ -33,16 +35,18 @@ const Section = ({ name }) => {
 
   return (
     <Styled.SectionContainer className="section__container" ac>
-      {sectionBeers.length ? sectionBeers.map((data, idx) => {
-        const isLast = sectionBeers.length === idx + 1;
+      {beersIds.map((id, idx) => {
+        const data = sectionBeers[id];
+        const isLast = beersIds.length === idx + 1;
+
         const Component = () => <Beer data={data}/>;
 
         return isLast ?
-          <VisibilitySensor key={`visib-wrap-${name}-${data.id}`} onChange={fetchNextpage}>
+          <VisibilitySensor key={`visib-wrap-${name}-${id}`} onChange={fetchNextpage}>
             <Component />
           </VisibilitySensor> :
-          <Component key={`beer-${name}-${data.id}`} />
-      }) : null}
+          <Component key={`beer-${name}-${id}`} />
+      })}
     </Styled.SectionContainer>
   );
 };

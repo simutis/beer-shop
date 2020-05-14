@@ -1,10 +1,22 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Styled from './Beer.styles';
+import StoreContext from "../../store/StoreContext";
 
 const Beer = ({data}) => {
   const {name, image_url, abv} = data;
+
+  const {
+    setShowModal,
+    setActiveBeer,
+  } = useContext(StoreContext);
+
+  const handleClick = () => {
+    setActiveBeer(data);
+    setShowModal(true);
+  }
+
   return (
-    <Styled.Wrapper>
+    <Styled.Wrapper onClick={handleClick}>
       <Styled.PicWrapper>
         <Styled.Picture src={image_url} alt="beer pic" />
       </Styled.PicWrapper>

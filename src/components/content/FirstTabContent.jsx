@@ -22,9 +22,9 @@ const FirstTabContent = ({query}) => {
     <Styled.TabWrapper>
       <Styled.SectionWrapper className="section__wrapper">
         <Styled.Header className="section__header">
-          <SectionMenuItem {...{activeSection, setActiveSection}} name="All" seqNr={0} />
-          <SectionMenuItem {...{activeSection, setActiveSection}} name="Pizza" seqNr={1} />
-          <SectionMenuItem {...{activeSection, setActiveSection}} name="Steak" seqNr={2} />
+          <SectionMenuItem {...{activeSection, setActiveSection}} name="ALL" seqNr={0} />
+          <SectionMenuItem {...{activeSection, setActiveSection}} name="PIZZA" seqNr={1} />
+          <SectionMenuItem {...{activeSection, setActiveSection}} name="STEAK" seqNr={2} />
         </Styled.Header>
         <Swipeable onSwiped={handleSwipe} trackMouse={true}>
           <Styled.AllSections className="sections__all" {...{ activeSection }}>
