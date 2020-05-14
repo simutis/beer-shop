@@ -6,8 +6,6 @@ import {toJS} from 'mobx';
 import {Swipeable} from "react-swipeable";
 
 const CartBeer = observer(({beer, isFirst}) => {
-  console.log('-----beer: ', beer.image_url);
-
   const {
     cartItems,
     allBeers,

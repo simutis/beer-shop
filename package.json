@@ -1,5 +1,6 @@
 {
-  "name": "test-esf-mobx",
+  "homepage": "http://simutis.github.io/beer-shop",
+  "name": "beer-shop",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
@@ -35,13 +36,16 @@
     "eslint": "^4.19.1",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
+    "gh-pages": "^2.2.0",
     "prettier": "^1.12.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "setupFiles": [

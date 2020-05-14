@@ -20,6 +20,7 @@ const Wrapper = styled.div`
   padding: 0px 15px 15px;
   transition: all 0.5s ease;
   align-items: center;
+  z-index: 9;
 `;
 
 const Header = styled.div`

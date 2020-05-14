@@ -1,6 +1,7 @@
 import { observable, action, computed, onBecomeObserved, toJS } from 'mobx';
 
 class MainStore {
+  @observable containerHeight = null;
   @observable activeTab = 0;
   @observable allBeers = {};
   @observable pizzaBeers = {};
@@ -98,6 +99,10 @@ class MainStore {
   setSteakBeers = action('set-steak-beers', beers => {
     this.steakBeers = { ...this.steakBeers, ...this.serializeById(beers) };
   });
+
+  setContainerHeight = action('set-container-height', height => {
+    this.containerHeight = height;
+  })
 
   fetchBeers = action('fetch-beers', async ({ section, page }) => {
     const queryObj = {};
