@@ -7,7 +7,7 @@
     "babel-jest": "18.0.0",
     "enzyme": "^3.9.0",
     "font-awesome": "^4.7.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "mobx": "^5.9.0",
     "mobx-react": "^5.4.3",
     "mobx-react-devtools": "^6.1.1",
